@@ -26,6 +26,7 @@ function showScreen(screen) {
 
 function startGame() {
   level = 1;
+  errorTime = 1000;
   startLevel();
 }
 
@@ -37,6 +38,27 @@ function goToPart2() {
 }
 
 function startLevel() {
+  switch (level) {
+    case 5:
+      errorTime = 800;
+      break;
+    case 10:
+      errorTime = 600;
+      break;
+    case 15:
+      errorTime = 500;
+      break;
+    case 25:
+      errorTime = 250;
+      break;
+    case 35:
+      errorTime = 100;
+      break;
+    case 75:
+      errorTime = 50;
+      break;
+  }
+
   state = S_GLOW;
   showScreen('glow');
   
