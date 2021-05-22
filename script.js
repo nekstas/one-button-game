@@ -75,7 +75,7 @@ function continueGame() {
     level += 1;
     startLevel();
   } else {
-    state = S_GAMEOVER;
+    gameover();
   }
 }
 
