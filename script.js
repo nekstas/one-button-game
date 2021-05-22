@@ -76,7 +76,6 @@ function continueGame() {
     startLevel();
   } else {
     gameover();
-    console.log(1);
   }
 }
 
