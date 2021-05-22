@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Одна кнопка</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="root">
+  <div class="window">
+    <h1 class="header">
+      Одна кнопка
+    </h1>
+
+    <div class="screen start-screen">
+      <div class="start-tip">
+        Привет, это игра с одной кнопкой.<br>
+        На каждом уровне квадрат будет гореть какое-то время. 
+        Далее нужно будет нажать и удерживать кнопку столько времени, сколько горел квадрат.
+        Если Вы справитесь с нужной точностью, то проходите на следующий уровень.<br>
+        Уровни генерируются рандомно, но точность повышается (уменьшается допустимая ошибка)
+        всегда одинаково.<br>
+      </div>
+      <h2 class="subheader">
+        Удачи!
+      </h2>
+    </div>
+
+    <div class="screen glow-screen">
+      <h2 class="subheader level-text"></h2>
+      <div class="glowing-block"></div>
+    </div>
+
+    <div class="screen press-screen">
+      <h2 class="subheader level-text"></h2>
+      <div class="no glowing-block"></div>
+    </div>
+
+    <div class="screen result-screen">
+      <h2 class="subheader level-text"></h2>
+      <table class="result-table">
+        <tr>
+          <td>Время уровня</td>
+          <td>Ваше время</td>
+          <td>Ошибка</td>
+        </tr>
+        <tr>
+          <td class="level-time"></td>
+          <td class="player-time"></td>
+          <td class="cur-error-time"></td>
+        </tr>
+      </table>
+      <h2 class="subheader status-text"></h2>
+    </div>
+
+    <div class="screen gameover-screen">
+      <h2 class="subheader">Игра закончена</h2>
+      <div class="levels-count"></div>
+    </div>
+
+    <button class="button">
+      Начать
+    </button>
+  </div>
+</body>
+</html>
