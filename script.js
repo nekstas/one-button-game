@@ -76,6 +76,7 @@ function continueGame() {
     startLevel();
   } else {
     gameover();
+    console.log(1);
   }
 }
 
@@ -111,7 +112,6 @@ button.addEventListener('mouseup', () => {
   setTimeout(() => {
     if (state != S_PRESS) return;
     playerTime = new Date() - pressTime;
-    console.log(playerTime);
     curErrorTime = Math.abs(levelTime - playerTime);
     endLevel();
   }, 100);
